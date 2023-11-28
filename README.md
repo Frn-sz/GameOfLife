@@ -1,0 +1,1 @@
+Game of Life feito em C apenas para estudo. Ainda em desenvolvimento.
