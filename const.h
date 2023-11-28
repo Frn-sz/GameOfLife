@@ -1,0 +1,7 @@
+#define CELL_SIZE 10
+#define SCREEN_WIDTH 800
+#define SCREEN_HEIGHT 600
+#define ROWS 100
+#define COLS 100
+#define MAX_GENERATIONS 100
+#define ALIVE_PERCENTAGE 30

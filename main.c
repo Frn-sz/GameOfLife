@@ -1,11 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <time.h>
 #include "game_logic.c"
 #include "matrix_logic.c"
-
-#define MAX_GENERATIONS 10
+#include "const.h"
 
 /*
 Regras
@@ -23,6 +18,7 @@ int main(int argc, char const *argv[])
     int **next_state = initialize_matrix();
 
     randomize_matrix(current_state);
+    initializeSDL();
 
     for (int i = 0; i < MAX_GENERATIONS; i++)
     {
@@ -32,9 +28,11 @@ int main(int argc, char const *argv[])
         current_state = next_state;
         next_state = temp;
 
-        sleep(1);
-        print_matrix(current_state);
+        drawMatrix(current_state);
+        SDL_Delay(100);
     }
+
+    closeSDL();
 
     free_space(current_state);
     free_space(next_state);

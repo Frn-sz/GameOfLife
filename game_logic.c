@@ -1,5 +1,4 @@
-#define ROWS 8
-#define COLS 8
+#include "const.h"
 
 int calc_cell_next_state(int current_cell_state, int qnt_neighbors)
 {

@@ -1,12 +1,5 @@
-
-#include <stdlib.h>
-#include <time.h>
-
-#define ROWS 8
-#define COLS 8
-
-#define MAX_GENERATIONS 10
-#define ALIVE_PERCENTAGE 30
+#include "const.h"
+#include "libs.h"
 
 void clear_screen()
 {
@@ -25,20 +18,6 @@ int **initialize_matrix()
         matrix[i] = (int *)(malloc(sizeof(int) * COLS));
 
     return matrix;
-}
-
-void print_matrix(int **matrix)
-{
-    clear_screen();
-    for (int i = 0; i < ROWS; i++)
-    {
-        for (int j = 0; j < COLS; j++)
-        {
-            printf("%d ", matrix[i][j]);
-        }
-        printf("\n");
-    }
-    printf("\n");
 }
 
 void free_space(int **matrix)
