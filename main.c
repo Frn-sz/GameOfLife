@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
+#include "game_logic.c"
+#include "matrix_logic.c"
 
 #define MAX_GENERATIONS 10
 
