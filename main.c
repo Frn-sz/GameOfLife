@@ -1,6 +1,8 @@
 #include "game_logic.c"
 #include "matrix_logic.c"
 #include "const.h"
+#include "print_simulation.h"
+#include "libs.h"
 
 /*
 Regras
